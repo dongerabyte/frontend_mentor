@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --card-color: hsl(0, 0%, 12%) ;
+    --link-color: hsl(0, 0%, 20%);
+    --other-gray : hsl(0, 0%, 8%) ;
+    --green-color: hsl(75, 94%, 57%);
+    --selection-color: hsl(75, 98%, 41%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    list-style: none;
+}
+
+main ,footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    background-color:var(--other-gray);
+}
+
+main {
+    height: 95vh;
+}
+
+footer {
+    height: 5vh;
+    color: white;
+}
+
+.card {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    padding: 16px;
+    background-color: var(--card-color);
+    border-radius: 16px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.card__image_container {
+    display: block;
+    width: 20%;
+}
+
+.card__image_container > img {
+    border-radius: 50%;
+}
+
+.card__name {
+    margin-bottom: 0.7rem;
+    color: white;
+}
+
+.card__country {
+    margin-bottom: 1.6rem;
+    color: var(--green-color);
+}
+
+.card__description {
+    margin-bottom: 0.8rem;
+    color: white;
+}
+
+.card__grid {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+.card__link {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: var(--link-color);
+    cursor: pointer;
+}
+
+.card__link:hover  {
+    background-color: var(--green-color);
+}
+
+.card__link:hover > a {
+    color: black;
+}
+
+.card__link > a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.card__link::picker-icon{
+    color: black;
+}
+
+
+
