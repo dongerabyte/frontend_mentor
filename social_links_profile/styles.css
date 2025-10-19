@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 :root {
     --card-color: hsl(0, 0%, 12%) ;
     --link-color: hsl(0, 0%, 20%);
@@ -11,8 +6,19 @@
     --selection-color: hsl(75, 98%, 41%);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "MyFont";
+    src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("ttf");
+}
+
 html {
     font-size: 62.5%;
+    width: 100vw;
 }
 
 ul {
@@ -28,6 +34,7 @@ main ,footer {
 
 main {
     height: 95vh;
+    width: 100%;
 }
 
 footer {
@@ -41,34 +48,52 @@ footer {
     margin-right: auto;
     height: fit-content;
     padding: 16px;
+    width: 31rem;
     background-color: var(--card-color);
     border-radius: 16px;
-    max-width: 250px;
     text-align: center;
 }
 
 .card__image_container {
-    display: block;
-    width: 20%;
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-bottom: 1.9rem;
+    width: 26%;
 }
 
 .card__image_container > img {
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
+
 }
 
 .card__name {
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.9rem;
+    font-size: 2rem;
+    font-weight:lighter;
+    letter-spacing: 0.05rem;
     color: white;
+    font-family: "MiFont", sans-serif;
+    font-weight: 400;
 }
 
 .card__country {
-    margin-bottom: 1.6rem;
+    margin-bottom: 2.1rem;
     color: var(--green-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    font-family: "MiFont", sans-serif;
 }
 
 .card__description {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
     color: white;
+    font-family: "MiFont", sans-serif;
+    letter-spacing: 0.05rem;
+    font-weight: lighter;
+    font-size: 1.2rem;
 }
 
 .card__grid {
@@ -79,31 +104,30 @@ footer {
 }
 
 .card__link {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
-    padding: 10px;
+    height: 3.65rem;
     margin: 5px;
+    margin-bottom: 0.85rem;
     border-radius: 5px;
     background-color: var(--link-color);
-    cursor: pointer;
+    cursor: url(./assets/images/hand-pointer.png), pointer;
+    color: white;
+    text-decoration: none;
+    font-family: "MiFont", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.07rem;
 }
 
 .card__link:hover  {
     background-color: var(--green-color);
-}
-
-.card__link:hover > a {
     color: black;
 }
 
-.card__link > a {
-    color: white;
-    text-decoration: none;
-    
-}
-
-.card__link::picker-icon{
-    color: black;
+.card__link:active{
+    background-color: var(--selection-color);
 }
 
 
