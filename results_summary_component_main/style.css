@@ -37,6 +37,8 @@ html,body {
 }
 
 main {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 90%;
 }
@@ -46,8 +48,9 @@ main {
     /*Contenedor superior*/
 
     .ppal-container {
-        width: 100%;
+        width: fit-content;
         height: 90%;
+        background-color: var(--white);
     }
 
     .container-left {
@@ -187,6 +190,8 @@ main {
         border-radius: 2rem;
         background-color: var(--dark-gray-blue);
         color: var(--white);
+        outline: 0;
+        border-width: 0;
         font-size: 1rem;
         font-weight: 500;
         font-family: sans-serif;
@@ -201,7 +206,7 @@ main {
 }
 	
 	
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
     body {
         height: 100%;
     }
@@ -209,6 +214,8 @@ main {
     main {
         height: 90vh;
         display: flex;
+        background-color: var(--pale-blue);
+    }
 
     .rights {
         height: 10%;
@@ -219,6 +226,8 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 2rem;
+        box-shadow: 0.3rem 0.3rem 0.7rem 0.7rem var(--cobalt-blue2);
     }
 
     .container-left{
@@ -227,8 +236,56 @@ main {
         border-radius: 2rem;
     }
 
+    
+    .container-left h2 {
+        font-size: 1.8rem;
+    }
+
+    .container-left__circle {
+        height: 12rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     .container-right {
         height: 32rem;
         width: 23rem;
+    }
+
+    .container-right__list {
+        margin-bottom: 3rem;
+    }
+
+    .container-right__list > li:hover {
+        transform: scale(1.05);
+    }
+
+    .summary {
+        font-size: 1.8rem;
+    }
+
+    .continue-button {
+        cursor: pointer;
+        transition: 0.1s all;
+        border-width: 0;
+    }
+
+    .continue-button:hover {
+        background-color: var(--cobalt-blue);
+        transform: scale(1.05);
+    }
+
+    .continue-button:active {
+        background-color: var(--container-left);
+        transform: scale(1);
+    }
+
+    .rights {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--pale-blue);
     }
 }
