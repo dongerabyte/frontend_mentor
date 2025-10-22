@@ -2,7 +2,11 @@
         /*Neutrales*/
         --black: hsl(212, 21%, 14%);
         --grey: hsl(228, 12%, 48%);
-        --cream: hsl(30, 38%, 92%);  --white: hsl(0, 0%, 100%);
+        --cream: hsl(30, 38%, 92%);  
+        --white: hsl(0, 0%, 100%);
+        /*Primary*/
+        --green-500: hsl(158, 36%, 37%);
+        --green-700: hsl(158, 42%, 18%);
 }
 
 * {
@@ -13,12 +17,12 @@
 
 html {
         font-size: 62.5%;
+        font-family: sans-serif;
 }
 
 main {
         width: 100%;
-        height: 90vh;
-        background-color: blue;
+        background-color: var(--cream);
 }
 
 @media (min-width: 280px) {
@@ -35,29 +39,126 @@ main {
                 width: 90vw;
                 height: fit-content;
                 background-color: aquamarine;
+                border-radius: 0.5rem;
+                overflow: hidden;
         }
 
         .ppal-container__image {
                 width: 100%;
                 aspect-ratio: 1/1;
                 background-color:wheat;
+                border-radius: 0.5rem;
+                overflow: hidden;
+        }
+
+        .ppal-container__image img{
+                width: 101%;
+                height: 101%;
         }
 
         .ppal-container__info {
+                display: flex;
+                flex-direction: column;
+                justify-content:space-between;
+                
                 width: 100%;
+                box-sizing: border-box;
+                padding: 3rem;
                 aspect-ratio: 1/1;
-                background-color: blueviolet;
+                background-color:var(--white);
         }
+
+        .ppal-container__info h3 {
+                margin-bottom: 6vw;
+                font-size: 3vw;
+                text-transform: uppercase;
+                font-family: "Montserrat";
+                font-weight: 500;
+                letter-spacing: 1.5vw;
+                color: var(--black);
+                opacity: 0.8;
+        }
+
+        .ppal-container__info h2 {
+                margin-bottom: 5vw;
+                font-size: 8.2vw;
+                font-family: "Fraunces";
+                line-height: 8vw;
+                color: var(--black);
+        }
+
+        .ppal-container__info > p {
+                margin-bottom: 5vw;
+                font-family: "Montserrat";
+                font-size: 3.7vw ;
+                color: var(--black);
+                line-height: 6.4vw;
+        }
+
+        .ppal-container__info--price {
+                display: flex;
+                justify-content:left;
+                align-items: center;
+                margin-bottom: 5vw;
+                font-size: 1.5rem;
+        }
+
+        .ppal-container__info--price p {
+                margin-right: 2rem;
+                color: var(--green-500);
+                font-family: "Fraunces";
+                font-size: 8vw;
+                font-weight: 700;
+        }
+
+        .ppal-container__info--price del {
+                opacity: 0.6;
+                font-size: 3vw;
+        }
+
+        .ppal-container__button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                width: 100%;
+                padding: 4vw;
+                font-size:  3.5vw;
+                font-weight: 600;
+                text-align: center;
+                letter-spacing: 0.1rem;
+                border-radius: 0.8rem;
+                background-color: var(--green-500);
+                color: var(--white);
+        }
+
+        .ppal-container__button img {
+                margin-right: 1rem;
+        }
+
+        .attribution {
+                display: block;
+                height: 5vh;
+                text-align: center;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                font-size: 1.5rem;
+                background-color: var(--cream);
+        }
+
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1024px) {
+
         main {
-                padding: calc(45vh - 17.5rem) 0;
+                box-sizing: border-box;
+                padding: 0;
+                height: 95vh;
         }
 
         .ppal-container {
-                width: 50rem;
-                height: 35rem;
+                width: 60rem;
+                height: 45rem;
                 display: flex;
         }
 
@@ -69,7 +170,64 @@ main {
         .ppal-container__info {
                 width: 50%;
                 height: 100%;
+                padding: 3rem;
         }
+
+        .ppal-container__info h3 {
+                font-size: 1.2rem;
+                letter-spacing: 0.5rem;
+                margin-bottom: 2.2rem;
+        }
+
+        .ppal-container__info h2 {
+                font-size: 3.2rem;
+                line-height: 3.2rem;
+                margin-bottom: 2.4rem;
+        }
+
+        .ppal-container__info > p {
+                font-size: 1.4rem;
+                line-height: 2.3rem;
+                margin-bottom:2.4rem;
+        }
+
+        .ppal-container__info--price {
+                margin-bottom: 3rem;
+        }
+
+        .ppal-container__info--price p:first-child {
+                font-size: 3.1rem;
+                line-height: normal;
+                margin-bottom: 0;     
+        }
+
+        .ppal-container__info--price del {
+                font-size: 1.5rem;
+                line-height: normal;
+                margin-bottom: 0;      
+        }
+
+        .ppal-container__button {
+                font-size: 1.5rem;
+                line-height: normal;
+                margin-bottom: 0;
+                padding: 1.5rem;
+                transition: 0.5s all;
+                cursor: pointer;
+        }
+
+        .ppal-container__button:hover{
+                background-color: var(--green-700);
+                transform: scale(1.05);
+                transition: 0.5s;
+        }
+
+        .ppal-container__button:active {
+                background: yellowgreen;
+                transform: scale(1);
+                transition: 0s;
+        }
+
 
 }
 
