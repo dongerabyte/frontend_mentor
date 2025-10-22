@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="./style.css">
         <link rel="shortcut icon" href="/imagen.ico" type="image/x-icon">
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="escribe la ruta" defer></script>
         <title>Results summary component</title>
     </head>
@@ -23,48 +26,48 @@
         <main>
             <div class="ppal-container">
                 <section class="container-left">
-                    <h2 class="container-left__title">Your result</h2>
+                    <h2 >Your result</h2>
 
-                    <div class="container-left__circle">
-                        <p class="">76</p>
+                    <div class="container-left__circle" >
+                        <p>76</p>
                         <p>of 100</p>
 
                     </div>
 
-                    <h3 class="">Great</h3>
+                    <h3>Great</h3>
 
-                    <p class="">You scored higher than 65% of the people who have taken these tests.</p>
+                    <p>You scored higher than 65% of the people who have taken these tests.</p>
                 </section>
 
-                <section class="container__right">
+                <section class="container-right">
                     <h2 class="summary">Summary</h2>
 
-                    <ul>
+                    <ul class="container-right__list">
                         <li >
-                            <p>Reaction</p>
-                            <p>80/100</p>
+                            <p> <img src="./assets/images/icon-reaction.svg" alt=""> Reaction</p>
+                            <p class="points">80</p>
                         </li>
                         <li>
-                            <p>Memory</p>
-                            <p>93/100</p>
+                            <p> <img src="./assets/images/icon-memory.svg" alt=""> Memory</p>
+                            <p class="points">93</p>
                         </li>
                         <li>
-                            <p>Verbal</p>
-                            <p>61/100</p>
+                            <p> <img src="./assets/images/icon-verbal.svg" alt=""> Verbal</p>
+                            <p class="points">61</p>
                         </li>
                         <li>
-                            <p>Visual</p>
-                            <p>73/100</p>
+                            <p> <img src="./assets/images/icon-visual.svg" alt=""> Visual</p>
+                            <p class="points">73</p>
                         </li>
                     </ul>
 
-                    <button class="">Continue</button>
+                    <button class="continue-button">Continue</button>
                 </section>
 
             </div>
         </main>
         
-        <footer>
+        <footer class="rights">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
             Coded by <a href="#">Gerardo González García</a>.
         </footer>
