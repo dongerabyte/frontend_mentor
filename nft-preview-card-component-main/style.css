@@ -38,7 +38,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--blue-900);
+    background-color: var(--blue-950);
 }
 
 @media (min-width:280px) {
@@ -47,7 +47,8 @@ main {
         width: 88vw;
         padding: 6vw;
         border-radius: 1.5rem;
-        background-color: var(--blue-800);
+        background-color: var(--blue-900);
+        box-shadow: 1px 1px 30px black;
     }
 
     .card__img {
@@ -185,7 +186,7 @@ main {
 
     footer {
         min-height: 5%;
-        background-color: var(--blue-900);
+        background-color: var(--blue-950);
         color: var(--white);
     }
 
@@ -201,5 +202,62 @@ main {
 }
 
 @media (min-width:800px) {
+    main {
+        padding: 3rem 0;
+    }
+
+    .card {
+        width: 35rem;
+        height: 60rem;
+        padding: 2.2rem;
+    }
+
+    .card__img {
+        margin-bottom: 2.7rem;
+    }
+
+    .card h3 {
+        font-size: 2.2rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .card > p {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        margin-bottom: 2.7rem;
+    }
+
+    .card__nft{
+        font-size: 1.5rem;
+        padding-bottom: 2.2rem;
+    }
+
+    .card__nft p > img {
+        height: 2rem;
+    }
+
+    .card__creator-box {
+        margin-top: 1.6rem;
+    }
+
+    .card__creator-box p {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    .card__creator-box figure {
+        width: 3.2rem;
+        border-width: 1px;
+        margin-right: 1.8rem;
+        margin-left: 0.4rem;
+    }
+
+    .footer {
+
+        height: 5%;
+    }
+
+    .attribution {
+        font-size: 1.5rem;
+    }
 
 }
