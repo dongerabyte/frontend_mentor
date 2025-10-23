@@ -24,17 +24,21 @@ html {
 
 body {
     width: 100vw;
-    height: 95vh;
+    height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 main {
     width: 100%;
-    height: fit-content;
+    min-height: 95%;
     padding: 5vw 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    background-color: var(--blue-900);
 }
 
 @media (min-width:280px) {
@@ -42,22 +46,60 @@ main {
         height: fit-content;
         width: 88vw;
         padding: 6vw;
-        border-radius: 1rem;
-        background-color: aquamarine;
+        border-radius: 1.5rem;
+        background-color: var(--blue-800);
     }
 
     .card__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
         width: 100%;
         aspect-ratio: 1/1;
         margin-bottom: 7vw;
-        border-radius: 0.6rem;
-        background-color: chocolate;
+        border-radius: 1rem;
+        overflow: hidden;
+        background-color: var(--cyan-400);
+        cursor: pointer;
+    }
+
+    .card__img:hover .card__img--img {
+        opacity: 0.5;
+        transition: all 0.2s;
+    }
+
+    .card__img:hover .card__img--view {
+        opacity: 1;
+        transition: all 0.2s;
+    }
+
+    .card__img--view {
+        position: absolute;
+        z-index: 8;
+        opacity: 0;
+        transition: all 0.2s;
+    }
+
+    .card__img--img {
+        width: 100%;
+        transition: all 0.2s;
     }
 
     .card h3 {
+        width: fit-content;
         font-family: "Outfit";
         font-size: 6vw;
         margin-bottom: 3vw;
+        color: var(--white);
+        font-weight: 500;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .card h3:hover {
+        color: var(--cyan-400);
     }
 
     .card > p {
@@ -66,11 +108,7 @@ main {
         font-size: 4.4vw;
         line-height: 7.2vw;
         font-weight: 300;
-    }
-
-    .card__nft p {
-        display: flex;
-        align-items: center;
+        color: var(--blue-500);
     }
 
     .card__nft {
@@ -81,12 +119,27 @@ main {
         font-size: 4vw;
         font-family: "Outfit";
         border-bottom: 1px;
-        border-color: black;
+        border-color: var(--blue-500);
         border-style: solid;
+    }
+
+    .card__nft p {
+        display: flex;
+        align-items: center;
+    }
+
+    .card__nft p:first-child {
+        color: var(--cyan-400);
+        font-weight: 500;
+    }
+
+    .card__nft P:last-child {
+        color: var(--blue-500);
     }
 
     .card__nft p img {
         margin-right: 1.4vw;
+        height: 5vw;
     }
 
     .card__creator-box {
@@ -96,12 +149,26 @@ main {
         align-items: center;
     }
 
+    .card__creator-box p {
+        color: var(--blue-500);
+    }
+
+    .card__creator-box a {
+        color: var(--white);
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    .card__creator-box a:hover {
+        color: var(--cyan-400);
+    }
+
     .card__creator-box figure {
         width: 10vw;
         margin-right: 4vw;
         border-style: solid;
         border-color: var(--white);
-        border-width: 1px;
+        border-width: 2px;
         border-radius: 50%;
         overflow: hidden;
     }
@@ -114,4 +181,25 @@ main {
         font-size: 4vw;
         font-family: "Outfit";
     }
+    
+
+    footer {
+        min-height: 5%;
+        background-color: var(--blue-900);
+        color: var(--white);
+    }
+
+    .attribution {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        height: 100%;
+        font-size: 3vw;
+    }
+
+
+}
+
+@media (min-width:800px) {
+
 }
